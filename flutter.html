@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flutter — Vignesh B</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>:root { --pa: #00d4ff; }</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">VB<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-sep"></li>
+      <li><a href="flutter.html" class="nav-tech nav-active" style="--tc:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" class="nav-tech" style="--tc:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" class="nav-tech" style="--tc:#68a063">Node.js</a></li>
+      <li><a href="devops.html" class="nav-tech" style="--tc:#ff9800">DevOps</a></li>
+      <li class="nav-sep"></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="flutter.html" onclick="closeMobileMenu()" style="color:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" onclick="closeMobileMenu()" style="color:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" onclick="closeMobileMenu()" style="color:#68a063">Node.js</a></li>
+      <li><a href="devops.html" onclick="closeMobileMenu()" style="color:#ff9800">DevOps</a></li>
+      <li><a href="index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="tech-hero">
+    <div class="tech-hero-bg">
+      <div class="tech-orb tech-orb-1"></div>
+      <div class="tech-orb tech-orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="tech-hero-content">
+      <div class="tech-icon-wrap">🐦</div>
+      <div class="tech-page-badge">Mobile Development</div>
+      <h1 class="tech-hero-title">Flutter <span>Development</span></h1>
+      <p class="tech-hero-sub">
+        Building pixel-perfect, high-performance cross-platform apps with Flutter and Dart.
+        Specialized in BLoC architecture, Firebase suite, multi-flavor builds, and native
+        integrations — shipping to Play Store and App Store.
+      </p>
+      <div class="tech-stats">
+        <div class="tech-stat">
+          <span class="tech-stat-num">4+</span>
+          <span class="tech-stat-label">Years Flutter</span>
+        </div>
+        <div class="tech-stat-divider"></div>
+        <div class="tech-stat">
+          <span class="tech-stat-num">2</span>
+          <span class="tech-stat-label">Published Apps</span>
+        </div>
+        <div class="tech-stat-divider"></div>
+        <div class="tech-stat">
+          <span class="tech-stat-num">5+</span>
+          <span class="tech-stat-label">App Variants</span>
+        </div>
+        <div class="tech-stat-divider"></div>
+        <div class="tech-stat">
+          <span class="tech-stat-num">BLoC</span>
+          <span class="tech-stat-label">Architecture</span>
+        </div>
+      </div>
+      <div class="tech-hero-actions">
+        <a href="#published" class="btn btn-tech">Published Apps</a>
+        <a href="#firebase" class="btn btn-outline">Firebase Suite</a>
+        <a href="#cicd" class="btn btn-outline">CI/CD</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Approach</span>
+        <h2 class="section-title">What I Build with Flutter</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card fade-up">
+          <span class="overview-icon">🏗️</span>
+          <h3>BLoC Architecture</h3>
+          <p>Clean, testable, and scalable state management using the BLoC pattern — keeping UI, business logic, and data layers clearly separated for maintainable codebases.</p>
+        </div>
+        <div class="overview-card fade-up">
+          <span class="overview-icon">🌍</span>
+          <h3>Multi-App Ecosystem</h3>
+          <p>Generating multiple production apps (store, community, delivery partner) from a single Flutter codebase using Flutter Flavors — separate configs, assets, and environments.</p>
+        </div>
+        <div class="overview-card fade-up">
+          <span class="overview-icon">⚡</span>
+          <h3>Native Integrations</h3>
+          <p>Custom method channels for background location tracking, OCR receipt scanning, H3-hexagon mapping, and deep native Android/iOS feature access.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Published Apps -->
+  <section class="section" id="published">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live on Stores</span>
+        <h2 class="section-title">Published Applications</h2>
+        <p class="section-subtitle">Production apps shipped to Play Store & App Store</p>
+      </div>
+
+      <div class="app-showcase">
+
+        <!-- App 1: Community Commerce -->
+        <div class="app-showcase-card fade-up">
+          <div class="app-showcase-top">
+            <div class="phone-frame" id="phone1">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+
+                <!-- Screen 1: Home -->
+                <div class="app-screen active" id="p1s1">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header">
+                    <span>🛒 Community</span>
+                    <span>🔔</span>
+                  </div>
+                  <div class="app-body">
+                    <div class="app-row">
+                      <div class="app-card-sm">🏪<span>Stores</span></div>
+                      <div class="app-card-sm">🍕<span>Food</span></div>
+                      <div class="app-card-sm">🛠️<span>Services</span></div>
+                    </div>
+                    <div class="app-card-wide">
+                      <span class="aicon">🎉</span>
+                      <div class="atext">
+                        <div class="atitle">New Store Nearby</div>
+                        <div class="asub">Open now · 0.3 km away</div>
+                      </div>
+                      <span class="app-badge-sm">NEW</span>
+                    </div>
+                    <div class="app-card-wide">
+                      <span class="aicon">👷</span>
+                      <div class="atext">
+                        <div class="atitle">Electrician Available</div>
+                        <div class="asub">⭐ 4.8 · Verified</div>
+                      </div>
+                      <span class="app-badge-sm">HIRE</span>
+                    </div>
+                    <div class="app-card-wide">
+                      <span class="aicon">📅</span>
+                      <div class="atext">
+                        <div class="atitle">Community Event</div>
+                        <div class="asub">Tonight · 50 going</div>
+                      </div>
+                      <span class="app-badge-sm">JOIN</span>
+                    </div>
+                  </div>
+                  <div class="app-bottomnav">🏠 🛒 🔍 👤</div>
+                </div>
+
+                <!-- Screen 2: Push Notification -->
+                <div class="app-screen" id="p1s2">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header"><span>🔔 Notifications</span></div>
+                  <div class="app-body">
+                    <div class="notif-popup">
+                      <div class="notif-header">
+                        <div class="notif-app-icon">🛒</div>
+                        <span class="notif-app-name">Community App</span>
+                        <span class="notif-time">now</span>
+                      </div>
+                      <div class="notif-title">🎁 50% OFF Today Only!</div>
+                      <div class="notif-body">Fresh groceries from Green Mart. Use code SAVE50 before midnight.</div>
+                      <div class="notif-img">🛍️ Tap to Shop</div>
+                    </div>
+                    <div class="notif-popup" style="margin-top:6px;opacity:0.6">
+                      <div class="notif-header">
+                        <div class="notif-app-icon">🛒</div>
+                        <span class="notif-app-name">Community App</span>
+                        <span class="notif-time">2m ago</span>
+                      </div>
+                      <div class="notif-title">Your order is confirmed ✓</div>
+                      <div class="notif-body">Order #4521 placed successfully.</div>
+                    </div>
+                  </div>
+                  <div class="app-bottomnav">🏠 🛒 🔍 👤</div>
+                </div>
+
+                <!-- Screen 3: Store -->
+                <div class="app-screen" id="p1s3">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header"><span>🏪 My Store</span><span>⚙️</span></div>
+                  <div class="app-body">
+                    <div class="analytics-row">
+                      <div class="analytics-card">
+                        <div class="analytics-num">₹12.4K</div>
+                        <div class="analytics-label">Today</div>
+                      </div>
+                      <div class="analytics-card">
+                        <div class="analytics-num">48</div>
+                        <div class="analytics-label">Orders</div>
+                      </div>
+                    </div>
+                    <div class="mini-chart">
+                      <div class="mini-bar" style="height:30%"></div>
+                      <div class="mini-bar" style="height:50%"></div>
+                      <div class="mini-bar" style="height:40%"></div>
+                      <div class="mini-bar peak" style="height:90%"></div>
+                      <div class="mini-bar" style="height:70%"></div>
+                      <div class="mini-bar" style="height:60%"></div>
+                      <div class="mini-bar peak" style="height:100%"></div>
+                    </div>
+                    <div class="app-card-wide"><span class="aicon">📦</span><div class="atext"><div class="atitle">Pending Orders</div><div class="asub">3 orders awaiting</div></div><span class="app-badge-sm">3</span></div>
+                  </div>
+                  <div class="app-bottomnav">📊 📦 🔔 ⚙️</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;z-index:1">
+              <div class="screen-tabs" id="tabs1">
+                <button class="screen-tab active" onclick="switchScreen('p1',1,3)"></button>
+                <button class="screen-tab" onclick="switchScreen('p1',2,3)"></button>
+                <button class="screen-tab" onclick="switchScreen('p1',3,3)"></button>
+              </div>
+              <div class="screen-switcher-label">
+                <button onclick="switchScreen('p1',1,3)">Home</button>
+                <button onclick="switchScreen('p1',2,3)">Notif</button>
+                <button onclick="switchScreen('p1',3,3)">Store</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-showcase-bottom">
+            <div class="app-store-meta">
+              <div class="app-icon-large">🛒</div>
+              <div class="app-store-info">
+                <h3>Community Commerce App</h3>
+                <p>Addlogs Technology Pvt Ltd · Social Commerce</p>
+                <div class="app-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-num">4.8</span>
+                  <span class="rating-count">(1.2K reviews)</span>
+                </div>
+              </div>
+            </div>
+            <div class="app-features-list">
+              <div class="app-feature-item">Flutter Flavors — 3 app variants from 1 codebase</div>
+              <div class="app-feature-item">BLoC state management across all modules</div>
+              <div class="app-feature-item">FCM image-rich push notifications</div>
+              <div class="app-feature-item">Community store, services & events</div>
+            </div>
+            <div class="store-badges">
+              <a href="#" class="store-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-12.6L12.6 7.2 3.18 23.76zm16.7-10.2L16.7 11.4l-3.1 3.1 3.1 3.1 3.2-1.9c.9-.55.9-1.45 0-2zM3 .44C2.1-.07 1 .38 1 1.38v21.24c0 1 1.1 1.45 2 .94l11.6-11.56L3 .44zm10.5 11L3.18.24l10.32 10.32-1 .88z"/></svg>
+                Play Store
+              </a>
+              <a href="#" class="store-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- App 2: EK-Bharath -->
+        <div class="app-showcase-card fade-up">
+          <div class="app-showcase-top">
+            <div class="phone-frame" id="phone2">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+
+                <!-- Screen 1: Map -->
+                <div class="app-screen active" id="p2s1">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header"><span>🚚 EK-Bharath</span><span>📍</span></div>
+                  <div class="app-body">
+                    <div class="app-map-bg" style="flex:1">
+                      <div class="hex-grid">
+                        <div class="hex"></div><div class="hex active"></div><div class="hex hot"></div><div class="hex active"></div><div class="hex"></div>
+                        <div class="hex active"></div><div class="hex hot"></div><div class="hex hot"></div><div class="hex active"></div><div class="hex"></div>
+                        <div class="hex"></div><div class="hex active"></div><div class="hex hot"></div><div class="hex"></div><div class="hex active"></div>
+                        <div class="hex active"></div><div class="hex"></div><div class="hex active"></div><div class="hex active"></div><div class="hex"></div>
+                      </div>
+                      <div class="map-pin" style="top:35%;left:48%">📍</div>
+                    </div>
+                    <div class="app-card-wide" style="margin-top:6px"><span class="aicon">🟢</span><div class="atext"><div class="atitle">Online · Ready for orders</div><div class="asub">Today: 12 deliveries</div></div><span class="app-badge-sm">GO</span></div>
+                  </div>
+                  <div class="app-bottomnav">🗺️ 📦 💰 👤</div>
+                </div>
+
+                <!-- Screen 2: OCR Scan -->
+                <div class="app-screen" id="p2s2">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header"><span>📷 Scan Receipt</span></div>
+                  <div class="app-body">
+                    <div style="background:#0e1a0e;border-radius:12px;height:130px;display:flex;align-items:center;justify-content:center;position:relative;border:2px solid #00e67650;overflow:hidden">
+                      <div style="font-size:2rem">🧾</div>
+                      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#00e676,transparent);animation:scan 2s ease infinite"></div>
+                    </div>
+                    <div class="app-card-wide" style="margin-top:4px"><span class="aicon">✅</span><div class="atext"><div class="atitle">Address Detected</div><div class="asub">123, Gandhi Nagar, Coimbatore</div></div></div>
+                    <div class="app-card-wide"><span class="aicon">📦</span><div class="atext"><div class="atitle">2 Items Extracted</div><div class="asub">Auto-filled order form</div></div></div>
+                    <div style="margin-top:6px;background:#00d4ff;border-radius:10px;padding:8px;text-align:center;font-size:0.6rem;font-weight:700;color:#000">CONFIRM ORDER</div>
+                  </div>
+                  <div class="app-bottomnav">🗺️ 📦 💰 👤</div>
+                </div>
+
+                <!-- Screen 3: Analytics -->
+                <div class="app-screen" id="p2s3">
+                  <div class="app-statusbar"><span>9:41</span><span>●●●</span></div>
+                  <div class="app-header"><span>💰 Earnings</span></div>
+                  <div class="app-body">
+                    <div class="analytics-row">
+                      <div class="analytics-card">
+                        <div class="analytics-num">₹840</div>
+                        <div class="analytics-label">Today</div>
+                      </div>
+                      <div class="analytics-card">
+                        <div class="analytics-num">12</div>
+                        <div class="analytics-label">Trips</div>
+                      </div>
+                      <div class="analytics-card">
+                        <div class="analytics-num">4.9⭐</div>
+                        <div class="analytics-label">Rating</div>
+                      </div>
+                    </div>
+                    <div class="mini-chart" style="height:40px">
+                      <div class="mini-bar" style="height:40%"></div>
+                      <div class="mini-bar peak" style="height:80%"></div>
+                      <div class="mini-bar" style="height:55%"></div>
+                      <div class="mini-bar" style="height:70%"></div>
+                      <div class="mini-bar peak" style="height:100%"></div>
+                      <div class="mini-bar" style="height:65%"></div>
+                      <div class="mini-bar" style="height:75%"></div>
+                    </div>
+                    <div class="app-card-wide"><span class="aicon">🏆</span><div class="atext"><div class="atitle">Top Performer</div><div class="asub">Top 5% in your zone</div></div><span class="app-badge-sm">✓</span></div>
+                  </div>
+                  <div class="app-bottomnav">🗺️ 📦 💰 👤</div>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;flex-direction:column;align-items:center;gap:8px;position:relative;z-index:1">
+              <div class="screen-tabs" id="tabs2">
+                <button class="screen-tab active" onclick="switchScreen('p2',1,3)"></button>
+                <button class="screen-tab" onclick="switchScreen('p2',2,3)"></button>
+                <button class="screen-tab" onclick="switchScreen('p2',3,3)"></button>
+              </div>
+              <div class="screen-switcher-label">
+                <button onclick="switchScreen('p2',1,3)">Map</button>
+                <button onclick="switchScreen('p2',2,3)">OCR</button>
+                <button onclick="switchScreen('p2',3,3)">Earnings</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-showcase-bottom">
+            <div class="app-store-meta">
+              <div class="app-icon-large" style="background:linear-gradient(135deg,#00d4ff,#00e676)">🚚</div>
+              <div class="app-store-info">
+                <h3>EK-Bharath Delivery</h3>
+                <p>Addlogs Technology Pvt Ltd · Logistics</p>
+                <div class="app-rating">
+                  <span class="stars">★★★★★</span>
+                  <span class="rating-num">4.7</span>
+                  <span class="rating-count">(860 reviews)</span>
+                </div>
+              </div>
+            </div>
+            <div class="app-features-list">
+              <div class="app-feature-item">H3-hexagon geo-clustering for delivery zones</div>
+              <div class="app-feature-item">OCR receipt scanning for order automation</div>
+              <div class="app-feature-item">Background location tracking via method channel</div>
+              <div class="app-feature-item">Real-time earnings and trip analytics</div>
+            </div>
+            <div class="store-badges">
+              <a href="#" class="store-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.3.17.64.24.99.2l12.6-12.6L12.6 7.2 3.18 23.76zm16.7-10.2L16.7 11.4l-3.1 3.1 3.1 3.1 3.2-1.9c.9-.55.9-1.45 0-2zM3 .44C2.1-.07 1 .38 1 1.38v21.24c0 1 1.1 1.45 2 .94l11.6-11.56L3 .44zm10.5 11L3.18.24l10.32 10.32-1 .88z"/></svg>
+                Play Store
+              </a>
+              <a href="#" class="store-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                App Store
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Firebase Suite -->
+  <section class="section section-alt" id="firebase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Firebase Integration</span>
+        <h2 class="section-title">Firebase Suite</h2>
+        <p class="section-subtitle">Complete Firebase ecosystem integrated across both production apps</p>
+      </div>
+      <div class="firebase-grid">
+
+        <!-- FCM -->
+        <div class="firebase-card fade-up" style="--fb-color:#ffa000">
+          <div class="firebase-icon" style="--fb-color:#ffa000">🔔</div>
+          <h3>Push Notifications (FCM)</h3>
+          <p>Firebase Cloud Messaging integrated for targeted, image-rich promotional campaigns and transactional alerts — driving engagement across store, community, and delivery apps.</p>
+          <div class="firebase-features">
+            <div class="firebase-feature" style="--fb-color:#ffa000">
+              <div class="firebase-feature-dot"></div>Image-rich notifications with BigPicture style
+            </div>
+            <div class="firebase-feature" style="--fb-color:#ffa000">
+              <div class="firebase-feature-dot"></div>Topic-based targeting for user segments
+            </div>
+            <div class="firebase-feature" style="--fb-color:#ffa000">
+              <div class="firebase-feature-dot"></div>Background & foreground notification handling
+            </div>
+            <div class="firebase-feature" style="--fb-color:#ffa000">
+              <div class="firebase-feature-dot"></div>Deep link routing on notification tap
+            </div>
+            <div class="firebase-feature" style="--fb-color:#ffa000">
+              <div class="firebase-feature-dot"></div>FCM token refresh & device registration
+            </div>
+          </div>
+        </div>
+
+        <!-- Crashlytics -->
+        <div class="firebase-card fade-up" style="--fb-color:#f44336">
+          <div class="firebase-icon" style="--fb-color:#f44336">🛡️</div>
+          <h3>Firebase Crashlytics</h3>
+          <p>Real-time crash reporting and non-fatal error monitoring — catching production issues across all app flavors before users notice, with detailed stack traces and device context.</p>
+          <div class="firebase-features">
+            <div class="firebase-feature" style="--fb-color:#f44336">
+              <div class="firebase-feature-dot"></div>Auto crash reporting with full stack traces
+            </div>
+            <div class="firebase-feature" style="--fb-color:#f44336">
+              <div class="firebase-feature-dot"></div>Non-fatal error logging with custom keys
+            </div>
+            <div class="firebase-feature" style="--fb-color:#f44336">
+              <div class="firebase-feature-dot"></div>User identifier tagging for crash context
+            </div>
+            <div class="firebase-feature" style="--fb-color:#f44336">
+              <div class="firebase-feature-dot"></div>Flutter-specific Dart exception capture
+            </div>
+            <div class="firebase-feature" style="--fb-color:#f44336">
+              <div class="firebase-feature-dot"></div>Crash-free user rate monitoring
+            </div>
+          </div>
+        </div>
+
+        <!-- Analytics -->
+        <div class="firebase-card fade-up" style="--fb-color:#4caf50">
+          <div class="firebase-icon" style="--fb-color:#4caf50">📊</div>
+          <h3>Firebase Analytics</h3>
+          <p>Event-driven user behaviour analytics tracking screen views, user journeys, conversion funnels, and custom events — informing product decisions with real data.</p>
+          <div class="firebase-features">
+            <div class="firebase-feature" style="--fb-color:#4caf50">
+              <div class="firebase-feature-dot"></div>Custom event logging (add_to_cart, checkout)
+            </div>
+            <div class="firebase-feature" style="--fb-color:#4caf50">
+              <div class="firebase-feature-dot"></div>Screen view tracking with navigator observer
+            </div>
+            <div class="firebase-feature" style="--fb-color:#4caf50">
+              <div class="firebase-feature-dot"></div>User property tagging (role, region, flavor)
+            </div>
+            <div class="firebase-feature" style="--fb-color:#4caf50">
+              <div class="firebase-feature-dot"></div>Funnel analysis for order completion rate
+            </div>
+            <div class="firebase-feature" style="--fb-color:#4caf50">
+              <div class="firebase-feature-dot"></div>Audience segmentation for FCM campaigns
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CI/CD Pipeline -->
+  <section class="section" id="cicd">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Automation</span>
+        <h2 class="section-title">CI/CD Pipeline</h2>
+        <p class="section-subtitle">Automated build, test, sign, and release pipeline for Play Store & App Store</p>
+      </div>
+
+      <!-- Pipeline Flow -->
+      <div class="cicd-wrapper fade-up">
+        <div class="cicd-pipeline">
+
+          <div class="pipeline-step">
+            <div class="pipeline-node">💻</div>
+            <div class="pipeline-label">
+              <h4>Code Push</h4>
+              <p>Feature branch merged to main</p>
+              <span class="pipeline-tool">Bitbucket</span>
+            </div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-connector"></div>
+            <div class="pipeline-node">🏗️</div>
+            <div class="pipeline-label">
+              <h4>Build</h4>
+              <p>Multi-flavor app bundle / IPA</p>
+              <span class="pipeline-tool">flutter build</span>
+            </div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-connector"></div>
+            <div class="pipeline-node">🧪</div>
+            <div class="pipeline-label">
+              <h4>Test</h4>
+              <p>Unit & widget test suite</p>
+              <span class="pipeline-tool">flutter test</span>
+            </div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-connector"></div>
+            <div class="pipeline-node">🔐</div>
+            <div class="pipeline-label">
+              <h4>Sign</h4>
+              <p>Keystore (Android) / Certificate (iOS)</p>
+              <span class="pipeline-tool">jarsigner</span>
+            </div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-connector"></div>
+            <div class="pipeline-node">📤</div>
+            <div class="pipeline-label">
+              <h4>Upload</h4>
+              <p>Internal track / TestFlight</p>
+              <span class="pipeline-tool">fastlane</span>
+            </div>
+          </div>
+
+          <div class="pipeline-step">
+            <div class="pipeline-connector"></div>
+            <div class="pipeline-node">🚀</div>
+            <div class="pipeline-label">
+              <h4>Release</h4>
+              <p>Staged rollout to production</p>
+              <span class="pipeline-tool">Play Console</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Android & iOS Tracks -->
+      <div class="cicd-tracks">
+
+        <div class="cicd-track-card fade-up">
+          <div class="cicd-track-header">
+            <span class="cicd-track-icon">🤖</span>
+            <div>
+              <h3>Android — Play Store</h3>
+              <p>AAB via Google Play Console</p>
+            </div>
+          </div>
+          <div class="cicd-steps-list">
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">1</div>
+              <span>Build release App Bundle</span>
+              <code>build appbundle</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">2</div>
+              <span>Sign with Keystore</span>
+              <code>key.jks</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">3</div>
+              <span>Flavor-specific build config</span>
+              <code>--flavor prod</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">4</div>
+              <span>Upload to internal track</span>
+              <code>Play Console</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">5</div>
+              <span>Promote to production</span>
+              <code>Staged 10%→100%</code>
+            </div>
+          </div>
+        </div>
+
+        <div class="cicd-track-card fade-up">
+          <div class="cicd-track-header">
+            <span class="cicd-track-icon">🍎</span>
+            <div>
+              <h3>iOS — App Store</h3>
+              <p>IPA via App Store Connect</p>
+            </div>
+          </div>
+          <div class="cicd-steps-list">
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">1</div>
+              <span>Build release IPA archive</span>
+              <code>build ipa</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">2</div>
+              <span>Code signing with certificate</span>
+              <code>.p12 cert</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">3</div>
+              <span>Flavor target scheme</span>
+              <code>--flavor prod</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">4</div>
+              <span>Upload to TestFlight</span>
+              <code>altool / xcrun</code>
+            </div>
+            <div class="cicd-step-row">
+              <div class="cicd-step-num">5</div>
+              <span>Submit for App Review</span>
+              <code>App Store Connect</code>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- H3 Hexagonal Clustering Demo -->
+  <section class="section section-alt" id="h3demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Geo Intelligence</span>
+        <h2 class="section-title">H3 Hexagonal Grid Clustering</h2>
+        <p class="section-subtitle">Real delivery zone visualization — hover hexagons to inspect zone data</p>
+      </div>
+      <div class="h3-demo-wrapper">
+        <div>
+          <div class="h3-canvas-wrap">
+            <canvas id="h3Canvas" width="640" height="340"></canvas>
+            <div class="h3-legend">
+              <div class="h3-legend-item"><div class="h3-legend-dot" style="background:#1a3a2a"></div>No activity</div>
+              <div class="h3-legend-item"><div class="h3-legend-dot" style="background:#00876460"></div>Low</div>
+              <div class="h3-legend-item"><div class="h3-legend-dot" style="background:#ffa00070"></div>Medium</div>
+              <div class="h3-legend-item"><div class="h3-legend-dot" style="background:#f4433680"></div>High</div>
+              <div class="h3-legend-item"><div class="h3-legend-dot" style="background:#00d4ff"></div>Active rider</div>
+            </div>
+          </div>
+        </div>
+        <div class="h3-stats-panel">
+          <div class="h3-stat-card">
+            <h4>Total Zones</h4>
+            <div class="h3-stat-val" id="h3TotalZones">48</div>
+            <div class="h3-stat-sub">H3 resolution 7</div>
+          </div>
+          <div class="h3-stat-card">
+            <h4>Active Deliveries</h4>
+            <div class="h3-stat-val" id="h3ActiveDel">12</div>
+            <div class="h3-stat-sub">Live right now</div>
+          </div>
+          <div class="h3-stat-card">
+            <h4>Hot Zones</h4>
+            <div class="h3-stat-val" id="h3HotZones">7</div>
+            <div class="h3-stat-sub">&gt;80% density</div>
+          </div>
+          <div class="h3-hover-info" id="h3HoverInfo">
+            <h4>🔍 Hover a hex to inspect</h4>
+            <div class="h3-info-row"><span>Zone ID</span><span id="h3ZoneId">—</span></div>
+            <div class="h3-info-row"><span>Deliveries</span><span id="h3ZoneDel">—</span></div>
+            <div class="h3-info-row"><span>Avg Time</span><span id="h3ZoneTime">—</span></div>
+            <div class="h3-info-row"><span>Riders</span><span id="h3ZoneRiders">—</span></div>
+            <div class="h3-info-row"><span>Density</span><span id="h3ZoneDensity">—</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Loki App Log Viewer -->
+  <section class="section" id="logs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Observability</span>
+        <h2 class="section-title">App Log Viewer</h2>
+        <p class="section-subtitle">Enter your app User ID to stream live logs from Loki</p>
+      </div>
+      <div class="log-viewer-wrap">
+        <div class="log-search-panel">
+          <h3>🔍 Query Logs</h3>
+          <div class="log-input-group">
+            <label>User ID</label>
+            <input class="log-input" id="logUserId" placeholder="usr_abc123..." />
+          </div>
+          <div class="log-input-group">
+            <label>App</label>
+            <select class="log-input" id="logApp">
+              <option value="community">Community Commerce</option>
+              <option value="ekbharath">EK-Bharath Delivery</option>
+              <option value="adlogs">Adloggs</option>
+              <option value="engaje">Engaje</option>
+            </select>
+          </div>
+          <div class="log-input-group">
+            <label>Time Range</label>
+            <select class="log-input" id="logRange">
+              <option value="15m">Last 15 minutes</option>
+              <option value="1h" selected>Last 1 hour</option>
+              <option value="24h">Last 24 hours</option>
+              <option value="7d">Last 7 days</option>
+            </select>
+          </div>
+          <div class="log-input-group">
+            <label>Log Level</label>
+            <div class="log-filter-row">
+              <button class="log-filter-btn active" onclick="toggleFilter(this,'INFO')">INFO</button>
+              <button class="log-filter-btn warn active" onclick="toggleFilter(this,'WARN')">WARN</button>
+              <button class="log-filter-btn error active" onclick="toggleFilter(this,'ERROR')">ERROR</button>
+              <button class="log-filter-btn debug" onclick="toggleFilter(this,'DEBUG')">DEBUG</button>
+            </div>
+          </div>
+          <button class="btn-fetch-logs" onclick="fetchLogs()">▶ Fetch Logs</button>
+          <div class="log-status">
+            <div class="log-status-dot" id="lokiStatusDot"></div>
+            <span id="lokiStatusText">Enter User ID to connect</span>
+          </div>
+        </div>
+        <div class="log-terminal">
+          <div class="log-terminal-header">
+            <div class="log-terminal-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="log-terminal-title">
+              <span>●</span>
+              <span id="logTerminalTitle">loki · waiting for query</span>
+            </div>
+            <button class="grafana-action-btn" onclick="clearLogs()">Clear</button>
+          </div>
+          <div class="log-output" id="logOutput">
+            <div class="log-empty">
+              <div class="log-empty-icon">📋</div>
+              <span>Enter a User ID and click Fetch Logs</span>
+              <span style="font-size:0.68rem;opacity:0.6">Streams from Loki via HTTP API</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grafana Dashboard Embed -->
+  <section class="section section-alt" id="monitoring">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Monitoring</span>
+        <h2 class="section-title">Grafana Dashboard</h2>
+        <p class="section-subtitle">API latency metrics and request logs — powered by Grafana + Prometheus + Loki</p>
+      </div>
+      <div class="grafana-section-grid">
+
+        <!-- API Latency Panel -->
+        <div class="grafana-panel fade-up">
+          <div class="grafana-panel-header">
+            <div class="grafana-panel-title">
+              <div class="grafana-live-dot"></div>
+              API Latency — p50 / p95 / p99
+            </div>
+            <div class="grafana-panel-actions">
+              <a href="YOUR_GRAFANA_URL/d/api-latency" target="_blank" class="grafana-action-btn">Open ↗</a>
+            </div>
+          </div>
+          <div class="grafana-iframe-wrap">
+            <!-- Replace src with your Grafana panel embed URL -->
+            <!-- <iframe src="YOUR_GRAFANA_URL/d-solo/DASHBOARD_ID/api-latency?orgId=1&panelId=1&refresh=10s&theme=dark"></iframe> -->
+            <div class="grafana-placeholder">
+              <div class="sim-chart">
+                <svg viewBox="0 0 400 100" style="width:100%;height:120px">
+                  <defs>
+                    <linearGradient id="lg1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="lg2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#ffa000" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#ffa000" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- p50 area -->
+                  <path d="M0,70 C40,65 80,60 120,58 C160,56 200,62 240,55 C280,48 320,52 360,50 C380,49 400,51 400,51 L400,100 L0,100 Z" fill="url(#lg1)"/>
+                  <path d="M0,70 C40,65 80,60 120,58 C160,56 200,62 240,55 C280,48 320,52 360,50 C380,49 400,51 400,51" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                  <!-- p95 area -->
+                  <path d="M0,85 C40,78 80,75 120,72 C160,69 200,74 240,68 C280,62 320,66 360,60 C380,57 400,59 400,59 L400,100 L0,100 Z" fill="url(#lg2)"/>
+                  <path d="M0,85 C40,78 80,75 120,72 C160,69 200,74 240,68 C280,62 320,66 360,60 C380,57 400,59 400,59" fill="none" stroke="#ffa000" stroke-width="1.5" stroke-dasharray="4,2"/>
+                  <!-- Y axis labels -->
+                  <text x="4" y="55" fill="#555" font-size="8" font-family="monospace">200ms</text>
+                  <text x="4" y="72" fill="#555" font-size="8" font-family="monospace">120ms</text>
+                  <text x="4" y="90" fill="#555" font-size="8" font-family="monospace">50ms</text>
+                  <!-- X axis -->
+                  <text x="10" y="98" fill="#444" font-size="7" font-family="monospace">-1h</text>
+                  <text x="185" y="98" fill="#444" font-size="7" font-family="monospace">-30m</text>
+                  <text x="370" y="98" fill="#444" font-size="7" font-family="monospace">now</text>
+                  <!-- Legend -->
+                  <line x1="280" y1="12" x2="295" y2="12" stroke="#00d4ff" stroke-width="2"/>
+                  <text x="298" y="16" fill="#00d4ff" font-size="8" font-family="monospace">p50</text>
+                  <line x1="320" y1="12" x2="335" y2="12" stroke="#ffa000" stroke-width="1.5" stroke-dasharray="3,2"/>
+                  <text x="338" y="16" fill="#ffa000" font-size="8" font-family="monospace">p95</text>
+                </svg>
+                <div style="display:flex;gap:1rem;justify-content:center;margin-top:0.5rem">
+                  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#00d4ff;font-family:monospace">62ms</div><div style="font-size:0.65rem;color:#555">p50 avg</div></div>
+                  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#ffa000;font-family:monospace">148ms</div><div style="font-size:0.65rem;color:#555">p95 avg</div></div>
+                  <div style="text-align:center"><div style="font-size:1.2rem;font-weight:800;color:#f44336;font-family:monospace">320ms</div><div style="font-size:0.65rem;color:#555">p99 max</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- API Request Logs Panel -->
+        <div class="grafana-panel fade-up">
+          <div class="grafana-panel-header">
+            <div class="grafana-panel-title">
+              <div class="grafana-live-dot"></div>
+              Live API Request Logs — Loki
+            </div>
+            <div class="grafana-panel-actions">
+              <a href="YOUR_GRAFANA_URL/explore" target="_blank" class="grafana-action-btn">Explore ↗</a>
+            </div>
+          </div>
+          <div class="grafana-iframe-wrap">
+            <!-- Replace src with your Grafana Loki explore embed URL -->
+            <!-- <iframe src="YOUR_GRAFANA_URL/d-solo/DASHBOARD_ID/api-logs?orgId=1&panelId=2&refresh=5s&theme=dark"></iframe> -->
+            <div class="sim-log-lines" id="grafanaLogs">
+              <!-- populated by JS -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="grafana-config-note">
+        <span>⚙️</span>
+        <div>
+          To embed your live Grafana dashboard, replace <code>YOUR_GRAFANA_URL</code> with your instance URL
+          and uncomment the <code>&lt;iframe&gt;</code> tags. Ensure your Grafana panel has
+          <code>auth.anonymous.enabled = true</code> or use a signed embed token.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Proficiency</span>
+        <h2 class="section-title">Flutter Skills</h2>
+      </div>
+      <div class="skill-bars-grid">
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Flutter</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:95%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Dart</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:92%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">BLoC Pattern</span><span class="skill-bar-level">Expert</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:92%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Firebase (FCM, Crashlytics, Analytics)</span><span class="skill-bar-level">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:86%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Provider</span><span class="skill-bar-level">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:85%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Method Channel (Native)</span><span class="skill-bar-level">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:82%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">CI/CD (Play Store / App Store)</span><span class="skill-bar-level">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Adaptive Layouts</span><span class="skill-bar-level">Advanced</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Unit Testing</span><span class="skill-bar-level">Intermediate</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:74%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">Rive Animation</span><span class="skill-bar-level">Intermediate</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">H3-Hexagon Mapping</span><span class="skill-bar-level">Intermediate</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:75%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta"><span class="skill-bar-name">OCR Integration</span><span class="skill-bar-level">Intermediate</span></div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:72%"></div></div>
+        </div>
+      </div>
+      <div class="tech-tags-row">
+        <span class="tag tag-primary">Flutter Flavors</span>
+        <span class="tag tag-primary">MVVM</span>
+        <span class="tag">Play Store</span>
+        <span class="tag">App Store</span>
+        <span class="tag">Fastlane</span>
+        <span class="tag">Background Location</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">Pub.dev</span>
+        <span class="tag">Android</span>
+        <span class="tag">iOS</span>
+        <span class="tag">Code Refactoring</span>
+        <span class="tag">Design Patterns</span>
+        <span class="tag">Antigravity</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Work History</span>
+        <h2 class="section-title">Flutter Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Full-Stack Flutter Developer</h3>
+                <span class="timeline-company">Addlogs Technology Pvt Ltd</span>
+              </div>
+              <span class="timeline-period">4 Years — Present</span>
+            </div>
+            <p class="timeline-project">Community Commerce Project (Flutter)</p>
+            <ul class="timeline-points">
+              <li>Engineered robust Flutter architecture leveraging BLoC and Flutter Flavors for modular, multi-app scalability</li>
+              <li>Integrated Firebase Cloud Messaging with image-rich push notifications, Crashlytics for crash monitoring, and Analytics for user behaviour tracking</li>
+              <li>Built and maintained the full CI/CD pipeline — automated builds, signing, and staged Play Store / App Store deployments</li>
+              <li>Streamlined deployment with environment-based configs for dev, staging, and production flavors</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item fade-up">
+          <div class="timeline-dot timeline-dot-secondary"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Flutter Developer</h3>
+                <span class="timeline-company">Addlogs Technology Pvt Ltd</span>
+              </div>
+            </div>
+            <p class="timeline-project">EK-Bharath Delivery Project (Flutter)</p>
+            <ul class="timeline-points">
+              <li>Implemented H3-based clustering for delivery performance monitoring and geo-zone visualization</li>
+              <li>Built OCR-powered order creation scanning receipts to auto-extract order/address data</li>
+              <li>Established custom native method channel for efficient background location tracking on Android</li>
+              <li>Integrated Firebase Crashlytics and Analytics for delivery partner app monitoring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">VB<span class="dot">.</span></div>
+        <p>Vignesh B — Flutter Development</p>
+        <p class="footer-copy">
+          <a href="index.html" style="color:var(--primary);text-decoration:none">← Back to Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // ── Skill bars ──────────────────────────────────────
+    const fills = document.querySelectorAll('.skill-bar-fill');
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animated'); barObserver.unobserve(e.target); } });
+    }, { threshold: 0.3 });
+    fills.forEach(f => barObserver.observe(f));
+
+    // ── Phone screen switcher ───────────────────────────
+    function switchScreen(phone, num, total) {
+      for (let i = 1; i <= total; i++) {
+        const s = document.getElementById(phone + 's' + i);
+        if (s) s.classList.toggle('active', i === num);
+      }
+      const tabs = document.getElementById('tabs' + phone.replace('p',''));
+      if (tabs) tabs.querySelectorAll('.screen-tab').forEach((t, i) => t.classList.toggle('active', i === num - 1));
+      const phoneEl = document.getElementById('phone' + phone.replace('p',''));
+      if (phoneEl) {
+        const btns = phoneEl.closest('.app-showcase-top').querySelectorAll('.screen-switcher-label button');
+        btns.forEach((b, i) => b.classList.toggle('active', i === num - 1));
+      }
+    }
+    function autoRotate(phone, total) {
+      let current = 1;
+      setInterval(() => { current = current >= total ? 1 : current + 1; switchScreen(phone, current, total); }, 3000);
+    }
+    autoRotate('p1', 3);
+    autoRotate('p2', 3);
+
+    // ── H3 Hexagonal Canvas ─────────────────────────────
+    (function() {
+      const canvas = document.getElementById('h3Canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const W = canvas.width, H = canvas.height;
+      const R = 28; // hex radius
+      const rows = 8, cols = 14;
+      const hexes = [];
+
+      const DENSITIES = [0,0,0,1,1,2,2,2,3,3,3,3,4,4];
+
+      function hexPath(cx, cy, r) {
+        ctx.beginPath();
+        for (let i = 0; i < 6; i++) {
+          const a = Math.PI / 180 * (60 * i - 30);
+          const x = cx + r * Math.cos(a);
+          const y = cy + r * Math.sin(a);
+          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+        }
+        ctx.closePath();
+      }
+
+      const colorMap = ['#1a3a2a','#00876440','#ffa00060','#f4433670','#00d4ff'];
+      const labelMap = ['Empty','Low','Medium','High','Active'];
+
+      // Build hex data
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < cols; col++) {
+          const ox = col * R * Math.sqrt(3);
+          const oy = row * R * 1.5;
+          const cx = 20 + ox + (row % 2 === 0 ? 0 : R * Math.sqrt(3) / 2);
+          const cy = 20 + oy;
+          const density = DENSITIES[Math.floor(Math.random() * DENSITIES.length)];
+          const deliveries = density === 0 ? 0 : Math.floor(density * 8 + Math.random() * 10);
+          const riders = density >= 3 ? Math.floor(Math.random() * 3) + 1 : density >= 1 ? 1 : 0;
+          hexes.push({ cx, cy, density, deliveries, riders,
+            avgTime: `${Math.floor(8 + Math.random() * 15)}m`,
+            id: `7c${row.toString().padStart(2,'0')}${col.toString().padStart(2,'0')}`,
+            hovered: false
+          });
+        }
+      }
+
+      let hoveredHex = null;
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+        hexes.forEach(h => {
+          hexPath(h.cx, h.cy, R - 2);
+          ctx.fillStyle = h.hovered ? '#00d4ff30' : colorMap[h.density];
+          ctx.fill();
+          ctx.strokeStyle = h.hovered ? '#00d4ff' : '#ffffff08';
+          ctx.lineWidth = h.hovered ? 2 : 1;
+          ctx.stroke();
+          // rider dot
+          if (h.density === 4 || (h.density >= 2 && Math.random() > 0.7)) {
+            ctx.beginPath();
+            ctx.arc(h.cx, h.cy, 4, 0, Math.PI * 2);
+            ctx.fillStyle = '#00d4ff';
+            ctx.fill();
+          }
+        });
+      }
+
+      // Animate active hexes
+      let frame = 0;
+      function animate() {
+        frame++;
+        hexes.forEach(h => {
+          if (h.density >= 3 && frame % 40 === 0) {
+            h.density = h.density === 4 ? 3 : 4;
+          }
+        });
+        draw();
+        requestAnimationFrame(animate);
+      }
+      animate();
+
+      // Hover detection
+      canvas.addEventListener('mousemove', (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const scaleX = W / rect.width;
+        const scaleY = H / rect.height;
+        const mx = (e.clientX - rect.left) * scaleX;
+        const my = (e.clientY - rect.top) * scaleY;
+        let found = null;
+        hexes.forEach(h => {
+          h.hovered = false;
+          const d = Math.sqrt((mx - h.cx) ** 2 + (my - h.cy) ** 2);
+          if (d < R - 2) { h.hovered = true; found = h; }
+        });
+        hoveredHex = found;
+        if (found) {
+          document.getElementById('h3ZoneId').textContent = found.id;
+          document.getElementById('h3ZoneDel').textContent = found.deliveries;
+          document.getElementById('h3ZoneTime').textContent = found.avgTime;
+          document.getElementById('h3ZoneRiders').textContent = found.riders;
+          document.getElementById('h3ZoneDensity').textContent = labelMap[found.density];
+        }
+      });
+
+      canvas.addEventListener('mouseleave', () => {
+        hexes.forEach(h => h.hovered = false);
+        ['h3ZoneId','h3ZoneDel','h3ZoneTime','h3ZoneRiders','h3ZoneDensity'].forEach(id => {
+          document.getElementById(id).textContent = '—';
+        });
+      });
+    })();
+
+    // ── Loki Log Viewer ─────────────────────────────────
+    const activeFilters = new Set(['INFO','WARN','ERROR']);
+
+    function toggleFilter(btn, level) {
+      if (activeFilters.has(level)) {
+        activeFilters.delete(level);
+        btn.classList.remove('active');
+      } else {
+        activeFilters.add(level);
+        btn.classList.add('active');
+      }
+    }
+
+    const LOG_TEMPLATES = [
+      { l:'INFO',  msgs: [
+        'App started · user_id: <em>{uid}</em>',
+        'FirebaseAuth token refreshed',
+        'BLoC/HomeBloc → HomeLoadEvent dispatched',
+        'GET /api/community/stores 200 <em>{ms}ms</em>',
+        'POST /api/orders 201 <em>{ms}ms</em>',
+        'FCM notification received · campaign_id: <em>{cid}</em>',
+        'Navigator pushed route: /store/<em>{sid}</em>',
+        'Order <em>#{oid}</em> confirmed successfully',
+        'GET /api/user/profile 200 <em>{ms}ms</em>',
+        'BLoC/CartBloc → AddItemEvent dispatched',
+      ]},
+      { l:'DEBUG', msgs: [
+        'BLoC/HomeBloc state: HomeLoaded',
+        'SharedPreferences loaded · keys: 14',
+        'HTTP interceptor: added auth header',
+        'Image cache hit · url: cdn.app.com/img/<em>{sid}</em>',
+        'BLoC/AuthBloc state: Authenticated',
+        'WebSocket connected · ping: <em>{ms}ms</em>',
+      ]},
+      { l:'WARN',  msgs: [
+        'NetworkHelper: retry attempt 1 for /api/orders',
+        'Image load timeout · retrying…',
+        'FCM token stale · refreshing',
+        'Cache miss for key: <em>store_{sid}</em>',
+        'Slow API response: GET /api/map <em>{ms}ms</em>',
+      ]},
+      { l:'ERROR', msgs: [
+        'Crashlytics: NullPointerException @ OrderBloc.dart:142',
+        'HTTP 500 on POST /api/checkout',
+        'FCM token registration failed · retrying in 30s',
+        'BLoC/PaymentBloc: PaymentFailedEvent',
+      ]},
+    ];
+
+    function rand(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+    function uid() { return document.getElementById('logUserId').value || 'usr_' + Math.random().toString(36).slice(2,8); }
+    function fmtTemplate(t) {
+      return t.replace('{uid}', uid())
+               .replace('{ms}', Math.floor(40 + Math.random()*200))
+               .replace('{cid}', 'promo_' + Math.floor(Math.random()*100))
+               .replace('{sid}', Math.floor(Math.random()*9999))
+               .replace('{oid}', Math.floor(Math.random()*9999));
+    }
+
+    function buildLogLine(offset) {
+      const pool = LOG_TEMPLATES.filter(t => activeFilters.has(t.l));
+      if (!pool.length) return null;
+      const entry = rand(pool);
+      const now = new Date(Date.now() - offset * 1000);
+      const ts = now.toTimeString().slice(0,8) + '.' + String(now.getMilliseconds()).padStart(3,'0');
+      return { ts, level: entry.l, msg: fmtTemplate(rand(entry.msgs)) };
+    }
+
+    function clearLogs() {
+      document.getElementById('logOutput').innerHTML = '<div class="log-empty"><div class="log-empty-icon">📋</div><span>Cleared</span></div>';
+    }
+
+    function fetchLogs() {
+      const userId = document.getElementById('logUserId').value.trim();
+      const app = document.getElementById('logApp').value;
+      const range = document.getElementById('logRange').value;
+      const dot = document.getElementById('lokiStatusDot');
+      const status = document.getElementById('lokiStatusText');
+      const terminal = document.getElementById('logTerminalTitle');
+      const output = document.getElementById('logOutput');
+
+      if (!userId) {
+        dot.className = 'log-status-dot error';
+        status.textContent = 'User ID required';
+        return;
+      }
+
+      dot.className = 'log-status-dot';
+      status.textContent = 'Connecting to Loki…';
+      terminal.textContent = `loki · {app="${app}",user_id="${userId}"} · ${range}`;
+      output.innerHTML = '<div class="log-empty"><div class="log-empty-icon" style="animation:spin 1s linear infinite">⚙️</div><span>Fetching logs…</span></div>';
+
+      setTimeout(() => {
+        dot.className = 'log-status-dot connected';
+        status.textContent = `Connected · ${app} · ${range}`;
+        output.innerHTML = '';
+
+        // Generate sample log lines (newest first)
+        const count = { '15m': 20, '1h': 40, '24h': 60, '7d': 80 }[range] || 40;
+        const lines = [];
+        for (let i = 0; i < count; i++) {
+          const line = buildLogLine(i * (range === '15m' ? 45 : range === '1h' ? 90 : 3600));
+          if (line) lines.push(line);
+        }
+
+        lines.forEach((line, i) => {
+          const div = document.createElement('div');
+          div.className = 'log-line';
+          div.style.animationDelay = `${i * 0.03}s`;
+          div.innerHTML = `<span class="log-ts">${line.ts}</span><span class="log-level ${line.level}">${line.level}</span><span class="log-msg">${line.msg}</span>`;
+          output.appendChild(div);
+        });
+
+        output.scrollTop = output.scrollHeight;
+
+        // Stream new logs every 4s
+        const interval = setInterval(() => {
+          if (!document.getElementById('logOutput')) { clearInterval(interval); return; }
+          const line = buildLogLine(0);
+          if (!line) return;
+          const div = document.createElement('div');
+          div.className = 'log-line';
+          div.innerHTML = `<span class="log-ts">${new Date().toTimeString().slice(0,8)}</span><span class="log-level ${line.level}">${line.level}</span><span class="log-msg">${line.msg}</span>`;
+          output.insertBefore(div, output.firstChild);
+          if (output.children.length > 150) output.lastChild.remove();
+        }, 4000);
+
+      }, 1200);
+    }
+
+    // ── Grafana simulated log stream ────────────────────
+    const API_ROUTES = [
+      ['GET','/api/community/stores','ok',62],
+      ['POST','/api/orders','ok',118],
+      ['GET','/api/map/zones','ok',84],
+      ['GET','/api/user/profile','ok',45],
+      ['PUT','/api/cart','ok',55],
+      ['POST','/api/auth/refresh','ok',38],
+      ['GET','/api/notifications','ok',72],
+      ['POST','/api/checkout','warn',310],
+      ['GET','/api/riders/nearby','ok',95],
+      ['POST','/api/ocr/parse','ok',420],
+    ];
+
+    function grafanaLogLine() {
+      const route = API_ROUTES[Math.floor(Math.random() * API_ROUTES.length)];
+      const dur = Math.floor(route[3] * (0.6 + Math.random() * 0.8));
+      const slow = dur > 250;
+      const ts = new Date().toTimeString().slice(0,8);
+      const status = route[2] === 'ok' ? (slow ? 'warn' : 'ok') : 'err';
+      const code = status === 'ok' ? (route[0] === 'POST' ? '201' : '200') : status === 'warn' ? '200' : '500';
+      const div = document.createElement('div');
+      div.className = 'sim-log-line';
+      div.innerHTML = `<span class="sim-ts">${ts}</span><span class="sim-method">${route[0]}</span><span class="sim-path">${route[1]}</span><span class="sim-status ${status}">${code}</span><span class="sim-dur ${slow?'slow':''}">${dur}ms</span>`;
+      return div;
+    }
+
+    const gLogs = document.getElementById('grafanaLogs');
+    if (gLogs) {
+      for (let i = 0; i < 18; i++) {
+        const line = grafanaLogLine();
+        line.style.animationDelay = `${i * 0.05}s`;
+        gLogs.appendChild(line);
+      }
+      setInterval(() => {
+        const line = grafanaLogLine();
+        gLogs.insertBefore(line, gLogs.firstChild);
+        if (gLogs.children.length > 30) gLogs.lastChild.remove();
+      }, 1500);
+    }
+  </script>
+
+  <style>
+    @keyframes scan { 0% { top:0;opacity:1; } 100% { top:100%;opacity:0.3; } }
+    @keyframes spin  { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  </style>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps — Vignesh B</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>:root { --pa: #ff9800; }</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">VB<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li class="nav-sep"></li>
+      <li><a href="flutter.html" class="nav-tech" style="--tc:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" class="nav-tech" style="--tc:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" class="nav-tech" style="--tc:#68a063">Node.js</a></li>
+      <li><a href="devops.html" class="nav-tech nav-active" style="--tc:#ff9800">DevOps</a></li>
+      <li class="nav-sep"></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="flutter.html" onclick="closeMobileMenu()" style="color:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" onclick="closeMobileMenu()" style="color:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" onclick="closeMobileMenu()" style="color:#68a063">Node.js</a></li>
+      <li><a href="devops.html" onclick="closeMobileMenu()" style="color:#ff9800">DevOps</a></li>
+      <li><a href="index.html#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="tech-hero">
+    <div class="tech-hero-bg">
+      <div class="tech-orb tech-orb-1"></div>
+      <div class="tech-orb tech-orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="tech-hero-content">
+      <div class="tech-icon-wrap">⚙️</div>
+      <div class="tech-page-badge">Infrastructure & Observability</div>
+      <h1 class="tech-hero-title">DevOps <span>Engineering</span></h1>
+      <p class="tech-hero-sub">
+        Setting up production infrastructure, monitoring pipelines, and deployment automation.
+        Experienced with Grafana observability stacks, Nginx reverse proxies, Kafka event streams,
+        and Ubuntu server management for always-on production systems.
+      </p>
+      <div class="tech-stats">
+        <div class="tech-stat">
+          <span class="tech-stat-num">Grafana</span>
+          <span class="tech-stat-label">Observability</span>
+        </div>
+        <div class="tech-stat-divider"></div>
+        <div class="tech-stat">
+          <span class="tech-stat-num">Nginx</span>
+          <span class="tech-stat-label">Reverse Proxy</span>
+        </div>
+        <div class="tech-stat-divider"></div>
+        <div class="tech-stat">
+          <span class="tech-stat-num">Loki</span>
+          <span class="tech-stat-label">Log Management</span>
+        </div>
+      </div>
+      <div class="tech-hero-actions">
+        <a href="#skills" class="btn btn-tech">View Skills</a>
+        <a href="#projects" class="btn btn-outline">Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Approach</span>
+        <h2 class="section-title">What I Do in DevOps</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-card fade-up">
+          <span class="overview-icon">📊</span>
+          <h3>Full Observability Stack</h3>
+          <p>Building end-to-end observability with Grafana dashboards, Loki log aggregation, Prometheus metrics, Promtail log shipping, and Node Exporter system monitoring — giving full visibility into production health.</p>
+        </div>
+        <div class="overview-card fade-up">
+          <span class="overview-icon">🌐</span>
+          <h3>Server & Deployment</h3>
+          <p>Configuring Nginx as reverse proxy with SSL termination, managing Ubuntu services, running Node.js apps with PM2 in cluster mode, and automating environment configs for reliable deployments.</p>
+        </div>
+        <div class="overview-card fade-up">
+          <span class="overview-icon">🔄</span>
+          <h3>Event Infrastructure</h3>
+          <p>Managing Apache Kafka clusters for high-throughput event streaming between services — ensuring reliable message delivery, consumer group management, and topic partitioning strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Proficiency</span>
+        <h2 class="section-title">DevOps Skills</h2>
+      </div>
+      <div class="skill-bars-grid">
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Grafana</span>
+            <span class="skill-bar-level">Advanced</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:82%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Nginx</span>
+            <span class="skill-bar-level">Advanced</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Loki (Log Aggregation)</span>
+            <span class="skill-bar-level">Advanced</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:78%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Prometheus</span>
+            <span class="skill-bar-level">Intermediate</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:74%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">PM2 (Process Manager)</span>
+            <span class="skill-bar-level">Advanced</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:82%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Ubuntu Server</span>
+            <span class="skill-bar-level">Advanced</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Promtail</span>
+            <span class="skill-bar-level">Intermediate</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:72%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Node Exporter</span>
+            <span class="skill-bar-level">Intermediate</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:70%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Apache Kafka</span>
+            <span class="skill-bar-level">Intermediate</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:74%"></div></div>
+        </div>
+        <div class="skill-bar-item fade-up">
+          <div class="skill-bar-meta">
+            <span class="skill-bar-name">Docker</span>
+            <span class="skill-bar-level">Intermediate</span>
+          </div>
+          <div class="skill-bar-track"><div class="skill-bar-fill" style="--pct:68%"></div></div>
+        </div>
+      </div>
+      <div class="tech-tags-row">
+        <span class="tag tag-devops">Log Management</span>
+        <span class="tag tag-devops">API Latency Monitoring</span>
+        <span class="tag tag-devops">System Metrics</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Redis</span>
+        <span class="tag">AWS Redshift</span>
+        <span class="tag">SSL / TLS</span>
+        <span class="tag">Reverse Proxy</span>
+        <span class="tag">CI/CD Pipelines</span>
+        <span class="tag">Environment Config</span>
+        <span class="tag">Zero-Downtime Deploys</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">DevOps Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <div class="tech-project-card fade-up">
+          <span class="tech-project-label">Grafana · Loki · Prometheus · Nginx</span>
+          <div class="project-icon" style="margin-bottom:0.75rem">📊</div>
+          <h3 class="project-title">Full Observability Stack</h3>
+          <p class="project-desc">End-to-end monitoring and logging infrastructure for the Community Commerce and EK-Bharath platforms — giving the team real-time visibility into system health, API performance, and application logs.</p>
+          <ul class="project-highlights" style="margin-top:1rem">
+            <li><span class="highlight-icon">📈</span><span>Grafana dashboards with custom panels for API latency, error rates, and system metrics</span></li>
+            <li><span class="highlight-icon">📝</span><span>Loki + Promtail for centralized log aggregation across all services</span></li>
+            <li><span class="highlight-icon">🔔</span><span>Prometheus + Node Exporter for CPU, memory, and disk alerting</span></li>
+            <li><span class="highlight-icon">🌐</span><span>Nginx reverse proxy routing with SSL termination for all services</span></li>
+          </ul>
+        </div>
+        <div class="tech-project-card fade-up">
+          <span class="tech-project-label">Kafka · PM2 · Ubuntu · Docker</span>
+          <div class="project-icon" style="margin-bottom:0.75rem">🚀</div>
+          <h3 class="project-title">Deployment & Event Infrastructure</h3>
+          <p class="project-desc">Production deployment pipeline and Kafka event infrastructure supporting both platforms — ensuring high availability, automated environment configs, and reliable message streaming.</p>
+          <ul class="project-highlights" style="margin-top:1rem">
+            <li><span class="highlight-icon">⚡</span><span>Apache Kafka cluster for async event streaming between app services</span></li>
+            <li><span class="highlight-icon">🔄</span><span>PM2 cluster mode for zero-downtime Node.js deployments</span></li>
+            <li><span class="highlight-icon">⚙️</span><span>Automated environment configuration management for multi-stage deployments</span></li>
+            <li><span class="highlight-icon">🐳</span><span>Docker-based service isolation for consistent, portable environments</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">VB<span class="dot">.</span></div>
+        <p>Vignesh B — DevOps Engineering</p>
+        <p class="footer-copy">
+          <a href="index.html" style="color:var(--pa);text-decoration:none">← Back to Portfolio</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    const fills = document.querySelectorAll('.skill-bar-fill');
+    const barObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animated'); barObserver.unobserve(e.target); } });
+    }, { threshold: 0.3 });
+    fills.forEach(f => barObserver.observe(f));
+  </script>
+</body>
+</html>

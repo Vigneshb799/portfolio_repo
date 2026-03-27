@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx @angular/cli version)",
+      "Bash(npm list:*)"
+    ],
+    "additionalDirectories": [
+      "/media/adloggs/Adloggs/Adloggs/vicky/portfolio"
+    ]
+  }
+}

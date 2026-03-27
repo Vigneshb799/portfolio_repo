@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vignesh B — Full-Stack Flutter Developer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html" class="nav-logo">VB<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-active">Home</a></li>
+      <!-- <li class="nav-sep"></li> -->
+      <!-- <li><a href="flutter.html" class="nav-tech" style="--tc:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" class="nav-tech" style="--tc:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" class="nav-tech" style="--tc:#68a063">Node.js</a></li>
+      <li><a href="devops.html" class="nav-tech" style="--tc:#ff9800">DevOps</a></li> -->
+      <li class="nav-sep"></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+      <li><a href="flutter.html" onclick="closeMobileMenu()" style="color:#00d4ff">Flutter</a></li>
+      <li><a href="angular.html" onclick="closeMobileMenu()" style="color:#dd0031">Angular</a></li>
+      <li><a href="nodejs.html" onclick="closeMobileMenu()" style="color:#68a063">Node.js</a></li>
+      <li><a href="devops.html" onclick="closeMobileMenu()" style="color:#ff9800">DevOps</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-name">Vignesh <span class="highlight">B</span></h1>
+      <div class="hero-title">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-summary">
+        Results-driven Full-Stack Flutter Developer with <strong>4 years of experience</strong> building
+        scalable, cross-platform mobile and web applications. Specialized in Flutter BLoC architecture,
+        Node.js, and DevOps tooling.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">4+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Major Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span class="scroll-label">Scroll</span>
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <div class="scroll-arrows">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-avatar">
+          <div class="avatar-wrapper">
+            <div class="avatar-placeholder">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="35" r="22" fill="#00d4ff" opacity="0.8"/>
+                <ellipse cx="50" cy="85" rx="32" ry="22" fill="#00d4ff" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="avatar-ring"></div>
+            <div class="avatar-badge">
+              <span>Flutter</span>
+            </div>
+          </div>
+          <div class="about-info-cards">
+            <div class="info-card">
+              <span class="info-icon">📍</span>
+              <span>Coimbatore, Tamil Nadu</span>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">🎓</span>
+              <span>B.Sc Computer Technology</span>
+            </div>
+            <div class="info-card">
+              <span class="info-icon">💼</span>
+              <span>Addlogs Technology Pvt Ltd</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            I'm a <strong>Full-Stack Flutter Developer</strong> passionate about building elegant,
+            high-performance applications that solve real-world problems. With over 4 years at
+            <strong>Addlogs Technology Pvt Ltd</strong>, I've architected and delivered two
+            production-grade platforms serving real users at scale.
+          </p>
+          <p>
+            My expertise spans the full development lifecycle — from crafting pixel-perfect Flutter UIs
+            with BLoC state management to setting up robust DevOps pipelines with Grafana, Loki, and
+            Kafka for real-time monitoring.
+          </p>
+          <p>
+            I thrive in Agile environments, collaborate closely with backend teams, and have a strong
+            eye for both code quality and user experience. I'm also exploring AI/ML tooling including
+            Ollama, Hugging Face, and N8N automation workflows.
+          </p>
+          <div class="about-contact-links">
+            <a href="mailto:vigneshb7999@gmail.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+              vigneshb7999@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/vigneshb7999" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              linkedin.com/in/vigneshb7999
+            </a>
+            <a href="tel:+919655216725" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +91 96552 16725
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-category skill-category-wide">
+          <div class="skill-category-header">
+            <span class="skill-icon">📱</span>
+            <h3>Mobile Development & Architecture</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-primary">Flutter</span>
+            <span class="tag tag-primary">Dart</span>
+            <span class="tag tag-arch">MVVM Architecture</span>
+            <span class="tag tag-arch">State Management</span>
+            <span class="tag tag-arch">Design Patterns</span>
+            <span class="tag">Firebase</span>
+            <span class="tag">API Integration</span>
+            <span class="tag">Android</span>
+            <span class="tag">iOS</span>
+            <span class="tag">Push Notifications</span>
+            <span class="tag">Method Channel</span>
+            <span class="tag">Adaptive Layouts</span>
+            <span class="tag">Code Refactoring</span>
+            <span class="tag">Agile / Scrum</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-icon">🌐</span>
+            <h3>Full-Stack Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-secondary">Angular</span>
+            <span class="tag tag-secondary">Node js</span>
+            <span class="tag tag-secondary">Express</span>
+            <span class="tag tag-secondary">Grunt</span>
+            <span class="tag tag-secondary">TypeScript</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Standalone Components</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">Clickhouse</span>
+            <span class="tag">AWS Redshift</span>
+            <span class="tag">NPM</span>
+            <span class="tag">SFTP</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-icon">⚙️</span>
+            <h3>DevOps & Infrastructure</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-devops">Nginx</span>
+            <span class="tag tag-devops">Grafana</span>
+            <span class="tag tag-devops">Loki</span>
+            <span class="tag tag-devops">Prometheus</span>
+            <span class="tag">PM2</span>
+            <span class="tag">Ubuntu Service</span>
+            <span class="tag">Promtail</span>
+            <span class="tag">Node Exporter</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-icon">🛠️</span>
+            <h3>AI & Design Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-ai">Docker</span>
+            <span class="tag tag-ai">Ollama</span>
+            <span class="tag tag-ai">Hugging Face</span>
+            <span class="tag tag-ai">N8N</span>
+            <span class="tag tag-ai">Google Colab</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Photoshop</span>
+            <span class="tag">Illustrator</span>
+            <span class="tag">QGIS</span>
+            <span class="tag">H3-Hexagon</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-category-header">
+            <span class="skill-icon">💻</span>
+            <h3>IDEs & Editors</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-ide">VS Code</span>
+            <span class="tag tag-ide">Android Studio</span>
+            <span class="tag tag-ide">Cursor</span>
+            <span class="tag">Antigravity</span>
+            <span class="tag">Jira</span>
+            <span class="tag">Bitbucket</span>
+            <span class="tag">Git</span>
+            <span class="tag">Git Version Control</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Where I've Worked</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Full-Stack Flutter Developer</h3>
+                <span class="timeline-company">Addlogs Technology Pvt Ltd</span>
+              </div>
+              <span class="timeline-period">4Years — Present</span>
+            </div>
+            <p class="timeline-project">Community Commerce Project (Flutter)</p>
+            <ul class="timeline-points">
+              <li>Engineered and maintained a robust Flutter architecture leveraging BLoC pattern and Flutter Flavors for modular, multi-app scalability</li>
+              <li>Synchronized Firebase Cloud Messaging with rich media notifications to boost engagement and marketing reach</li>
+              <li>Partnered with backend teams to refine API communication, minimize latency, and maximize performance</li>
+              <li>Streamlined deployment pipelines by automating environment configurations, elevating release efficiency and reliability</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot timeline-dot-secondary"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Flutter Developer</h3>
+                <span class="timeline-company">Addlogs Technology Pvt Ltd</span>
+              </div>
+            </div>
+            <p class="timeline-project">EK-Bharath Delivery Project (Flutter)</p>
+            <ul class="timeline-points">
+              <li>Utilized H3-based clustering to enhance performance and streamline delivery monitoring with a hexagonal grid system</li>
+              <li>Built an OCR-powered order creation feature to scan receipts, extract address/order details, and automate workflow generation</li>
+              <li>Established a custom method channel to efficiently manage background location tracking in native Android</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="education-card">
+        <div class="education-icon">🎓</div>
+        <div class="education-info">
+          <h3>Bachelor of Science in Computer Technology</h3>
+          <p>Dr. N.G.P. Arts and Science College, Coimbatore, Tamil Nadu</p>
+        </div>
+        <span class="education-period">2016 — 2019</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">
+          I'm open to new opportunities and collaborations. Feel free to reach out!
+        </p>
+      </div>
+      <div class="contact-grid">
+        <a href="mailto:vigneshb7999@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,12 2,6"/>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <p>vigneshb7999@gmail.com</p>
+          <span class="contact-card-action">Send a message →</span>
+        </a>
+        <a href="https://linkedin.com/in/vigneshb7999" target="_blank" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <h3>LinkedIn</h3>
+          <p>linkedin.com/in/vigneshb7999</p>
+          <span class="contact-card-action">View profile →</span>
+        </a>
+        <a href="tel:+919655216725" class="contact-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.69h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.08 6.08l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
+          <h3>Phone</h3>
+          <p>+91 96552 16725</p>
+          <span class="contact-card-action">Call me →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">VB<span class="dot">.</span></div>
+        <p>Vignesh B — Full-Stack Flutter Developer</p>
+        <p class="footer-copy">Built with passion · 2024</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
