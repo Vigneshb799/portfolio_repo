@@ -635,6 +635,15 @@ body {
   padding-top: 0.5rem;
 }
 
+.contact-link-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.95rem 1rem 0.95rem 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+}
+
 .contact-link {
   display: flex;
   align-items: center;
@@ -643,6 +652,11 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   transition: var(--transition);
+  min-width: 0;
+}
+
+.contact-link-row:last-child {
+  border-bottom: 0;
 }
 
 .contact-link svg {
@@ -653,6 +667,90 @@ body {
 }
 
 .contact-link:hover { color: var(--primary); }
+
+.copy-btn {
+  position: relative;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.contact-copy-corner {
+  position: absolute;
+  top: 0.75rem;
+  right: 10px;
+}
+
+.copy-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.copy-btn::after {
+  content: attr(data-feedback);
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translate(-50%, 6px);
+  background: rgba(10, 15, 25, 0.95);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+.copy-btn:hover::after,
+.copy-btn:focus-visible::after,
+.copy-btn.copied::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.copy-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.copy-btn.copied {
+  border-color: var(--primary);
+  background: var(--primary-dim);
+  color: var(--primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* ===== SKILLS ===== */
 .skills-grid {
@@ -999,6 +1097,7 @@ body {
 }
 
 .contact-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1047,11 +1146,20 @@ body {
   word-break: break-all;
 }
 
+.contact-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
 .contact-card-action {
   color: var(--primary);
   font-size: 0.82rem;
   font-weight: 500;
-  margin-top: 0.25rem;
+  text-decoration: none;
 }
 
 /* ===== FOOTER ===== */

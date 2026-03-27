@@ -136,3 +136,48 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ===== COPY CONTACT DETAILS =====
+const copyButtons = document.querySelectorAll('[data-copy]');
+
+async function copyToClipboard(value) {
+  if (navigator.clipboard && window.isSecureContext) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const textarea = document.createElement('textarea');
+  textarea.value = value;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'absolute';
+  textarea.style.left = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+  document.execCommand('copy');
+  document.body.removeChild(textarea);
+}
+
+copyButtons.forEach(button => {
+  const defaultFeedback = button.getAttribute('data-feedback') || 'Copy';
+
+  button.addEventListener('click', async () => {
+    const value = button.getAttribute('data-copy');
+
+    try {
+      await copyToClipboard(value);
+      button.classList.add('copied');
+      button.setAttribute('data-feedback', 'Copied');
+
+      window.setTimeout(() => {
+        button.classList.remove('copied');
+        button.setAttribute('data-feedback', defaultFeedback);
+      }, 1800);
+    } catch (error) {
+      button.setAttribute('data-feedback', 'Error');
+
+      window.setTimeout(() => {
+        button.setAttribute('data-feedback', defaultFeedback);
+      }, 1800);
+    }
+  });
+});
