@@ -1052,6 +1052,44 @@ body {
   color: var(--primary);
 }
 
+.timeline-deployment {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.timeline-deployment-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.timeline-deployment-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--primary-glow);
+  background: var(--primary-dim);
+  transition: var(--transition);
+}
+
+.timeline-deployment-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 212, 255, 0.14);
+}
+
 .education-card {
   display: flex;
   align-items: center;
