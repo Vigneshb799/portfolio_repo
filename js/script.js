@@ -10,10 +10,12 @@ if (scrollIndicator) {
 }
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 30) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
+  if (navbar) {
+    if (window.scrollY > 30) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
   }
 
   // Hide scroll indicator once user starts scrolling
@@ -31,13 +33,19 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 let menuOpen = false;
 
-hamburger.addEventListener('click', () => {
-  menuOpen = !menuOpen;
-  mobileMenu.classList.toggle('open', menuOpen);
-  document.body.style.overflow = menuOpen ? 'hidden' : '';
-});
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.classList.toggle('open', menuOpen);
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+  });
+}
 
 function closeMobileMenu() {
+  if (!mobileMenu) {
+    return;
+  }
+
   menuOpen = false;
   mobileMenu.classList.remove('open');
   document.body.style.overflow = '';
@@ -58,6 +66,10 @@ let isDeleting = false;
 const typedEl = document.getElementById('typedText');
 
 function type() {
+  if (!typedEl) {
+    return;
+  }
+
   const currentPhrase = phrases[phraseIndex];
   if (isDeleting) {
     typedEl.textContent = currentPhrase.slice(0, charIndex - 1);
@@ -81,7 +93,9 @@ function type() {
   setTimeout(type, delay);
 }
 
-type();
+if (typedEl) {
+  type();
+}
 
 // ===== SCROLL ANIMATIONS =====
 const fadeElements = document.querySelectorAll(
